@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS mageschenk;
+
+CREATE TABLE IF NOT EXISTS mageschenk(
+	geschenkID SMALLINT PRIMARY KEY,
+    artikel VARCHAR(200) NOT NULL UNIQUE,
+	pries DECIMAL(5,2) NOT NULL DEFAULT 0.00,
+    jahrzugehörigkeit SMALLINT NOT NULL);

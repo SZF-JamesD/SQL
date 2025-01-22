@@ -1,0 +1,9 @@
+USE shop_db_down;
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM Verkauf;
+DELETE FROM Kunden;
+DELETE FROM Lieferanten;
+DELETE FROM Artikel;
+
+SET SQL_SAFE_UPDATES = 1;
