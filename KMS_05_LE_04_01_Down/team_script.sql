@@ -34,11 +34,10 @@ create table Coach_Trainings(
     institution varchar(255),
     certification_level varchar(50)
     );
-    
+ 
 create table coach_trainings_and_coaches(
 	coach_id int,
     training_id int,
-    primary key(coach_id, training_id),
     foreign key (coach_id) references coaches(coach_id),
     foreign key (training_id) references coach_trainings(training_id)
     );
@@ -46,15 +45,13 @@ create table coach_trainings_and_coaches(
 create table player_coaches(
 	player_id int,
     coach_id int,
-    primary key (player_id, coach_id),
     foreign key (player_id) references players(player_id),
     foreign key (coach_id) references coaches(coach_id)
     );
-    
+  
 create table coach_teams(
 	coach_id int,
     team_id int,
-    primary key (coach_id, team_id),
     foreign key (coach_id) references coaches(coach_id),
     foreign key (team_id) references teams(team_id)
     );

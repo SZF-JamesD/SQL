@@ -33,13 +33,15 @@ CREATE TABLE if not exists CD_Songs(
     foreign key(Song_ID) references Songs(Song_ID)
     );
     
+Drop view cd_songs_details;   
+ 
 CREATE VIEW CD_Songs_Details AS
 SELECT 
-    CDs.CD_Name AS CD_Name,
-    Songs.Song_Title AS Song_Name,
-    Songs.Rating AS Rating,
-    Music_Genre.Genre AS Genre,
-    Artist.Artist_Name AS Artist
+    CDs.CD_Name,
+    Songs.Song_Title,
+    Songs.Rating,
+    Music_Genre.Genre,
+    Artist.Artist_Name
 FROM 
     CD_Songs
 JOIN 
